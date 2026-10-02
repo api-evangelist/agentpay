@@ -1,31 +1,60 @@
 aid: agentpay
 name: AgentPay
-description: 'AgentPay is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+description: AgentPay provides pay‑per‑call web extraction, DNS/network intelligence, and document processing tools for AI agents. It offers REST
+  APIs and MCP servers for extracting web pages to markdown, performing DNS and WHOIS lookups, parsing PDFs, RSS/Atom feeds, and generating site
+  sitemaps, all billed per request via x402 on Base or Algorand. No signup required, with free trial credits and transparent pricing.
 url: https://raw.githubusercontent.com/api-evangelist/agentpay/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-02 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-02'
 modified: '2026-10-02'
 tags:
 - Company
-apis: []
+- API
+- AI
+- Extraction
+- Lookup
+- Tools
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: AgenticAccess
+  url: agentic-access/agentpay-agentic-access.yml
+- type: Spectral
+  url: rules/agentpay-rules.yml
+- type: Conformance
+  url: conformance/agentpay-conformance.yml
+- type: Hosts
+  url: hosts/agentpay-hosts.yml
+- type: Vendors
+  url: vendors/agentpay-vendors.yml
+- type: DomainSecurity
+  url: security/agentpay-domain-security.yml
 - type: Website
   url: https://agentpay.agentpay-apis.workers.dev
 - type: Documentation
   url: https://github.com/noah-silver/agentpay
-x-submission-notes: 'Pay-per-call web extraction, DNS/WHOIS lookup and document tools for AI agents via
-  x402. | Listed on Kin''s call 2026-10-02 despite: Working x402 pay-per-call API and live MCP, but hosted
-  on workers.dev by an individual with no own domain; ''agentpay'' is also a contested name.'
-x-submission-probe: root 200; OpenAPI 3.1.0 10 paths; llms.txt 200; MCP /mcp initialize 200 (AgentPay
-  APIs 1.1.0); GitHub repo 200; 404 probe 404 JSON
+apis:
+- name: AgentPay API
+  description: Pay-per-call web extraction, DNS/WHOIS lookup and document processing tools for AI agents.
+  humanURL: https://agentpay.agentpay-apis.workers.dev
+  baseURL: https://agentpay.agentpay-apis.workers.dev
+  aid: agentpay:agentpay-api
+x-submission-notes: 'Pay-per-call web extraction, DNS/WHOIS lookup and document tools for AI agents via x402. | Listed on Kin''s call 2026-10-02
+  despite: Working x402 pay-per-call API and live MCP, but hosted on workers.dev by an individual with no own domain; ''agentpay'' is also a contested
+  name.'
+x-submission-probe: root 200; OpenAPI 3.1.0 10 paths; llms.txt 200; MCP /mcp initialize 200 (AgentPay APIs 1.1.0); GitHub repo 200; 404 probe
+  404 JSON
 x-submitted-by: (GitHub issue author noah-silver) (github, 2026-10-01)
+x-enrichment:
+  date: '2026-10-02'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

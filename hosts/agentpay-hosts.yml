@@ -1,0 +1,40 @@
+generated: '2026-10-02'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 2
+  own: 0
+  other_domain: 0
+  platform: 2
+  roles:
+  - docs
+  - website
+hosts:
+- host: agentpay.agentpay-apis.workers.dev
+  found_by:
+  - pointer
+  - apis[]
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - api
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: workers.dev
+  role: website
+  relation: platform
+- host: github.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Documentation
+  serves:
+  - hosting
+  vendor: github-pages
+  registrable_domain: github.com
+  role: docs
+  relation: platform
