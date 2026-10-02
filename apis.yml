@@ -1,0 +1,31 @@
+aid: agentpay
+name: AgentPay
+description: 'AgentPay is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/agentpay/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-02'
+modified: '2026-10-02'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://agentpay.agentpay-apis.workers.dev
+- type: Documentation
+  url: https://github.com/noah-silver/agentpay
+x-submission-notes: 'Pay-per-call web extraction, DNS/WHOIS lookup and document tools for AI agents via
+  x402. | Listed on Kin''s call 2026-10-02 despite: Working x402 pay-per-call API and live MCP, but hosted
+  on workers.dev by an individual with no own domain; ''agentpay'' is also a contested name.'
+x-submission-probe: root 200; OpenAPI 3.1.0 10 paths; llms.txt 200; MCP /mcp initialize 200 (AgentPay
+  APIs 1.1.0); GitHub repo 200; 404 probe 404 JSON
+x-submitted-by: (GitHub issue author noah-silver) (github, 2026-10-01)
